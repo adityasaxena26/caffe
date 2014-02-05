@@ -14,6 +14,8 @@ if __name__ == '__main__':
       for index, id in enumerate(open(sys.argv[1]).readlines()):
           wordnet_id_indexes[id] = index
 
+      print wordnet_id_indexes
+
       output = open(sys.argv[3], 'wb')
 
       for file in glob.iglob(sys.argv[2] + '/*.jpg'):
