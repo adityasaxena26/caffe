@@ -17,7 +17,7 @@ if __name__ == '__main__':
       output = open(sys.argv[3], 'wb')
 
       for file in glob.iglob(sys.argv[2] + '/*.jpg'):
-          id, rest = os.path.basename(file).split('_', 2)
+          id, rest = os.path.basename(file).split('_', 1)
           index = wordnet_id_indexes[id]
           output.write('%s %d\n' % (file, index))
 
