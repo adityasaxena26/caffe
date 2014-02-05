@@ -12,9 +12,7 @@ if __name__ == '__main__':
   else:
       wordnet_id_indexes = {}
       for index, id in enumerate(open(sys.argv[1]).readlines()):
-          wordnet_id_indexes[id] = index
-
-      print wordnet_id_indexes
+          wordnet_id_indexes[id.strip()] = index
 
       output = open(sys.argv[3], 'wb')
 
